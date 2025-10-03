@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+/* Removed pulsing animations, made dark mode consistent and professional */
+@theme inline {
+  --color-background: #0a0e27;
+  --color-foreground: #e8eaf0;
+  --color-card: #12162b;
+  --color-card-foreground: #e8eaf0;
+  --color-primary: #00d9ff;
+  --color-primary-foreground: #0a0e27;
+  --color-secondary: #1a1f3a;
+  --color-accent: #ff6b35;
+  --color-muted: #1a1f35;
+  --color-muted-foreground: #7a8199;
+  --color-border: #252b45;
+  --color-neon-cyan: #00ffcc;
+  --color-neon-blue: #00d9ff;
+  --color-neon-orange: #ff6b35;
+  --radius: 0.5rem;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--color-background);
+  color: var(--color-foreground);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Simplified scrollbar without glow effects */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neon-cyan);
+}
+
+/* Consistent borders without animations */
+.neon-border {
+  border: 2px solid var(--color-primary);
+}
+
+.neon-glow {
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
+}
